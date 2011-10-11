@@ -1,0 +1,11 @@
+source :rubygems
+
+gem 'resque'
+gem 'class_loader'
+
+group :test do
+  gem 'test-unit'
+  gem 'shoulda'
+  gem 'shoulda-context'
+  gem 'mocha'
+end

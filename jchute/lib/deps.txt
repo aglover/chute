@@ -1,0 +1,6 @@
+[INFO] net.greghaines:jesque:jar:1.0.1-SNAPSHOT
+[INFO] +- redis.clients:jedis:jar:2.0.0:compile
+[INFO] +- commons-pool:commons-pool:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.6.1:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.8.4:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.8.4:compile
