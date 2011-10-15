@@ -20,15 +20,15 @@ class ResqueImplTest < Test::Unit::TestCase
   context "should push messages on a queue" do  
     should "act like a normal queue w/push" do  
       queue = Queue.create(:resque, "prod_android_build_events")      
-      queue.push("this is a test message intended for prod_android_build_events")
+      queue.push("this is a new test message intended for prod_android_build_events")
     end
   end
   
   
-  context "should push messages on a queue" do  
-    should "act like a normal queue w/push onto a different queue" do  
-     queue = Queue.create(:resque, "prod_log_events")      
-     queue.push("this is a test LOG!!!! message")
-    end
-  end
+  # context "should push messages on a queue" do  
+  #     should "act like a normal queue w/push onto a different queue" do  
+  #      queue = Queue.create(:resque, "prod_log_events")      
+  #      queue.push("this is a test LOG!!!! message")
+  #     end
+  #   end
 end

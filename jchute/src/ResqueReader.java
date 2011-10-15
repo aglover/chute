@@ -23,7 +23,7 @@ public class ResqueReader {
 
         // Start a worker to run jobs from the queue
         final Worker worker = new WorkerImpl(config,
-            Arrays.asList("prod_log_events"), map(entry("DynamicClazz", DynamicClazz.class)));
+            Arrays.asList("prod_android_build_events"), map(entry("JDynamicClazz", JDynamicClazz.class)));
         final Thread workerThread = new Thread(worker);
         workerThread.start();
 

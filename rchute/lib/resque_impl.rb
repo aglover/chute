@@ -11,19 +11,19 @@ class ResqueImpl < Queue
   
   def push(message)
 
-    queue =  @queue
-
-    if Object.const_defined? "DynamicClazz"
-      klass = Object.const_get("DynamicClazz")
-    else
-      klass = Object.const_set("DynamicClazz", Class.new)
-    end
+    # queue =  @queue
+    # 
+    #     if Object.const_defined? "DynamicClazz"
+    #       klass = Object.const_get("DynamicClazz")
+    #     else
+    #       klass = Object.const_set("DynamicClazz", Class.new)
+    #     end
+    #     
+    #     klass.define_singleton_method(:queue) do
+    #       return queue
+    #     end
     
-    klass.define_singleton_method(:queue) do
-      return queue
-    end
-    
-    Resque.enqueue(klass, message)
+    Resque.enqueue(DynamicClazz.new(@queue), message)
   end
   
 end
